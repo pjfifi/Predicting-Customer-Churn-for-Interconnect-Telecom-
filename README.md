@@ -72,15 +72,12 @@ This report summarizes the project on predicting customer churn for Interconnect
 3. **Feature Engineering:** A binary target variable 'churn' was created based on the 'EndDate' column. Binary categorical features were label encoded, and multi-class categorical features (Type, gender, InternetService, PaymentMethod) were one-hot encoded to prepare the data for modeling. Unnecessary columns like customerID, BeginDate, and EndDate were dropped before splitting the data.
 
 4. **Model Training:** Four different classification models were trained:
-    Gradient Boosting Machine (GBM)
-    
-    XGBoost
-    
-    LightGBM
-    
-    Random Forest Hyperparameter tuning for these models was performed using RandomizedSearchCV with AUC-ROC as the primary scoring metric. The data was split into training (70%), validation (15%), and testing (15%) sets for robust model development and evaluation.
+   * Gradient Boosting Machine (GBM)
+   * XGBoost
+   * LightGBM
+   * Random Forest Hyperparameter tuning for these models was performed using RandomizedSearchCV with AUC-ROC as the primary scoring metric. The data was split into training (70%), validation (15%), and testing (15%) sets for robust model development and evaluation.
 
-5. **Model Evaluation:** Models were evaluated on the validation set using AUC-ROC and accuracy scores. The Gradient Boosting Machine (GBM) was selected as the best-performing model on the validation set. This chosen GBM model was then further evaluated on the separate test set.
+7. **Model Evaluation:** Models were evaluated on the validation set using AUC-ROC and accuracy scores. The Gradient Boosting Machine (GBM) was selected as the best-performing model on the validation set. This chosen GBM model was then further evaluated on the separate test set.
 
 #### Difficulties Encountered and Solutions
 Several data-related challenges were addressed:
@@ -114,11 +111,11 @@ The critical steps in this churn prediction project included:
 The Gradient Boosting Machine (GBM) was selected as the final model.
 On the validation set, the GBM model achieved:
 * Accuracy: 0.7973 (reported as 0.7992 in the markdown after cell 217, but cell 217 output for GBM shows 0.7973)
-*AUC-ROC: 0.8605 (reported as 0.8611 in the markdown after cell 217, but cell 217 output for GBM shows 0.8605)
+* AUC-ROC: 0.8605 (reported as 0.8611 in the markdown after cell 217, but cell 217 output for GBM shows 0.8605)
 
 On the test set, the final GBM model demonstrated the following quality scores:
-*Accuracy: 0.7881
-*AUC-ROC: 0.8122
+* Accuracy: 0.7881
+* AUC-ROC: 0.8122
 
 The project concluded that while the GBM model provided a strong foundation, further refinement could enhance its robustness and predictive accuracy.
     
