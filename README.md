@@ -39,9 +39,6 @@ Based on the notebook, the project utilizes the following Python libraries:
     ```bash
     git clone 
     ```
-2.  Navigate to the project directory:
-    ```bash
-    ```
 3.  Install the necessary dependencies:
     ```bash
     pip install pandas numpy matplotlib seaborn scikit-learn xgboost jupyter
